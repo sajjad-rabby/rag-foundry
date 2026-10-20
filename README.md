@@ -107,7 +107,7 @@ that survives configuration changes.
 ## Installation
 
 ```bash
-git clone https://github.com/Sunyiad/rag-foundry.git
+git clone https://github.com/sajjad-rabby/rag-foundry.git
 cd rag-foundry
 pip install -e .
 ```
