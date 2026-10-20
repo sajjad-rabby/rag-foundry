@@ -1,0 +1,17 @@
+{
+  "index_path": "ragf_index.json",
+  "chunk_strategy": "sentence",
+  "chunk_size": 800,
+  "chunk_overlap": 120,
+  "top_k": 5,
+  "rrf_k": 60,
+  "min_score": 0.1,
+  "bm25_k1": 1.5,
+  "bm25_b": 0.75,
+  "vector_dims": 4096,
+  "llm_base_url": "https://api.openai.com",
+  "llm_model": "gpt-4o-mini",
+  "llm_temperature": 0.2,
+  "llm_timeout": 60.0,
+  "api_key_env": "RAGF_API_KEY"
+}

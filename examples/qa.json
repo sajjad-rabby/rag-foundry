@@ -1,0 +1,52 @@
+[
+  {
+    "question": "How many times does the service retry a failed request?",
+    "reference_answer": "The service retries failed requests three times using exponential backoff with jitter.",
+    "expected_keywords": ["retr", "backoff", "three"]
+  },
+  {
+    "question": "What is the base delay and the maximum delay?",
+    "reference_answer": "The base delay is 200 milliseconds and the maximum delay is 20 seconds.",
+    "expected_keywords": ["200", "20 seconds"]
+  },
+  {
+    "question": "When does the circuit breaker open and close again?",
+    "reference_answer": "It opens after five consecutive failures and closes after a 30 second cooldown.",
+    "expected_keywords": ["five", "30 second", "cooldown"]
+  },
+  {
+    "question": "Which requests are retried automatically?",
+    "reference_answer": "Idempotent requests are retried automatically; non-idempotent ones need an explicit retry token.",
+    "expected_keywords": ["idempotent", "retry token"]
+  },
+  {
+    "question": "How is the service deployed across availability zones?",
+    "reference_answer": "It is deployed to Kubernetes on three availability zones with canary rolling updates.",
+    "expected_keywords": ["kubernetes", "zone"]
+  },
+  {
+    "question": "What happens when the error rate exceeds one percent?",
+    "reference_answer": "Rollback is automatic when the error rate exceeds one percent.",
+    "expected_keywords": ["rollback", "automatic"]
+  },
+  {
+    "question": "Where are secrets stored?",
+    "reference_answer": "Secrets are injected at runtime from a managed vault, never stored in the container image.",
+    "expected_keywords": ["vault", "injected"]
+  },
+  {
+    "question": "How often does Prometheus scrape the services?",
+    "reference_answer": "Prometheus scrapes every service every fifteen seconds.",
+    "expected_keywords": ["fifteen", "scrape"]
+  },
+  {
+    "question": "How do alerts avoid reacting to short error spikes?",
+    "reference_answer": "Alerts fire on sustained error budget burn rather than point-in-time spikes.",
+    "expected_keywords": ["error budget", "sustained"]
+  },
+  {
+    "question": "What trace context standard is propagated?",
+    "reference_answer": "Distributed traces propagate W3C trace context across every hop.",
+    "expected_keywords": ["W3C", "trace context"]
+  }
+]
